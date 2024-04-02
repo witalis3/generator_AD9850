@@ -25,6 +25,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Adafruit_GFX_Library}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Bounce2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850_B}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/RotaryEncoder/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.486172665" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -36,6 +39,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Adafruit_GFX_Library}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Bounce2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850_B}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/RotaryEncoder/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.820752204" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -47,6 +53,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Adafruit_GFX_Library}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/SPI/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/Bounce2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/AH_AD9850_B}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/generator_AD9850/libraries/RotaryEncoder/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.572805707" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
@@ -71,4 +80,5 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

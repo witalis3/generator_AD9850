@@ -10,7 +10,7 @@
 
 void show_template();
 void switch_steps();
-
+void show_frequency();
 
 
 

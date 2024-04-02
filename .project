@@ -42,6 +42,11 @@
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/eightanaloginputs</locationURI>
 		</link>
 		<link>
+			<name>libraries/AH_AD9850_B</name>
+			<type>2</type>
+			<location>C:/Users/witol/Documents/Arduino/libraries/AH_AD9850_B</location>
+		</link>
+		<link>
 			<name>libraries/Adafruit_GFX_Library</name>
 			<type>2</type>
 			<location>C:/Users/witol/Documents/Arduino/libraries/Adafruit_GFX_Library</location>
@@ -55,6 +60,11 @@
 			<name>libraries/Bounce2</name>
 			<type>2</type>
 			<location>C:/Users/witol/Documents/Arduino/libraries/Bounce2</location>
+		</link>
+		<link>
+			<name>libraries/RotaryEncoder</name>
+			<type>2</type>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/RotaryEncoder/1.5.3</locationURI>
 		</link>
 		<link>
 			<name>libraries/SPI</name>

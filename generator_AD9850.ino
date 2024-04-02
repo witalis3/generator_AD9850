@@ -10,6 +10,8 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
 #include "Bounce2.h"
+#include <AH_AD9850_B.h>
+#include <RotaryEncoder.h>
 
 const char tft_cs = 2;			// <= /CS pin (chip-select, LOW to get attention of ILI9341, HIGH and it ignores SPI bus) default 10!
 const char tft_dc = 3;			// <= DC pin (1=data or 0=command indicator line) also called RS
@@ -36,6 +38,16 @@ unsigned long czas_zmiany;
 Adafruit_ILI9341 tft = Adafruit_ILI9341(tft_cs, tft_dc);
 Bounce2::Button up = Bounce2::Button();
 Bounce2::Button down = Bounce2::Button();
+#define CLK 8
+#define FQUP 9
+#define BitData 10
+AH_AD9850_B AD9850(CLK, FQUP, BitData);
+long frequency = 7000000;
+long step_value = 1000;
+char bufor[] = "              ";              //zmienna pomocnicza do wyrzucania danych na tft
+#define PIN_IN1 A0
+#define PIN_IN2 A1
+RotaryEncoder encoder(PIN_IN1, PIN_IN2, RotaryEncoder::LatchMode::FOUR3);
 
 void setup()
 {
@@ -57,9 +69,23 @@ void setup()
 	tft.fillScreen(ILI9341_BLACK);
 	show_template();
 	switch_steps();
+	AD9850.set_frequency(frequency);
+	show_frequency();
 }
 void loop()
 {
+	  static int pos = 0;
+	  encoder.tick();
+	  int newPos = encoder.getPosition();
+	  if (pos != newPos)
+	  {
+	    int enc = (int)(encoder.getDirection());
+	    frequency = frequency + enc*step_value;
+		show_frequency();
+	    pos = newPos;
+	  }
+
+
 	up.update();
 	if (up.pressed())
 	{
@@ -110,4 +136,15 @@ void switch_steps()
 	tft.setTextSize(5);
 	tft.setCursor(140, 94);
 	tft.print(steps[current_step]);
+}
+void show_frequency(){
+    long f_prefix = frequency/1000;                //pierwsza część częstotliwości
+    long f_sufix = frequency%1000;                 //obliczamy resztę z częstotliwości
+    sprintf(bufor,"%05lu",f_prefix);              //konwersja danych do wyświetlenia
+    tft.setTextSize(5);
+    tft.setCursor(4, 4);
+    tft.print(bufor);
+    tft.print(" ");
+    sprintf(bufor,".%03lu",f_sufix);              //konwersja danych do wyświetlenia
+    tft.print(bufor);
 }
