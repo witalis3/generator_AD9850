@@ -11,6 +11,7 @@
 void show_template();
 void switch_steps();
 void show_frequency();
+long get_step_value(byte step);
 
 
 
