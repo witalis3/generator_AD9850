@@ -2,7 +2,8 @@
  * generator na układzie AD9850
  * na bazie płytki PCB od sterownika PA 1.0
  *
- *
+ * ToDo
+ * - pamięć kroku i częstotliwości
  *
  */
 #include "generator_AD9850.h"
